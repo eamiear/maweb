@@ -1,0 +1,413 @@
+@charset "utf-8";
+$loading-width : 80px;
+$loading-height : 40px;
+$loading-animate-height : 70px;
+$loading-bar-width : 8px;
+$loading-bar-height : 100%;
+$loading-bar-color : lightgreen;
+$loading-bar-animate-color : lightblue;
+
+//条形loading
+.ma-bar-loading{
+  width: $loading-width;
+  height: $loading-height;
+
+  span{
+    display: inline-block;
+    width: $loading-bar-width;
+    height: $loading-bar-height;
+    border-radius: 4px;
+    background: $loading-bar-color;
+    animation : barLoading 1s ease infinite;
+
+    &:nth-child(2){
+      -webkit-animation-delay: 0.2s;
+      -moz-animation-delay: 0.2s;
+      -o-animation-delay: 0.2s;
+      animation-delay: 0.2s;
+    }
+    &:nth-child(3){
+      -webkit-animation-delay: 0.4s;
+      -moz-animation-delay: 0.4s;
+      -o-animation-delay: 0.4s;
+      animation-delay: 0.4s;
+    }
+    &:nth-child(4){
+      -webkit-animation-delay: .6s;
+      -moz-animation-delay: .6s;
+      -o-animation-delay: .6s;
+      animation-delay: .6s;
+    }
+    &:nth-child(5){
+      -webkit-animation-delay: .8s;
+      -moz-animation-delay: .8s;
+      -o-animation-delay: .8s;
+      animation-delay: .8s;
+    }
+  }
+}
+
+@keyframes barLoading{
+  0%,100%{
+    height: $loading-height;
+    background: $loading-bar-color;
+  }
+  50%{
+    height: $loading-animate-height;
+    margin: -15px 0;
+    background: $loading-bar-animate-color;
+  }
+}
+
+@-moz-keyframes barLoading{
+  0%,100%{
+    height: $loading-height;
+    background: $loading-bar-color;
+  }
+  50%{
+    height: $loading-animate-height;
+    margin: -15px 0;
+    background: $loading-bar-animate-color;
+  }
+}
+@-webkit-keyframes barLoading{
+  0%,100%{
+    height: $loading-height;
+    background: $loading-bar-color;
+  }
+  50%{
+    height: $loading-animate-height;
+    margin: -15px 0;
+    background: $loading-bar-animate-color;
+  }
+}
+@-ms-keyframes barLoading{
+  0%,100%{
+    height: $loading-height;
+    background: $loading-bar-color;
+  }
+  50%{
+    height: $loading-animate-height;
+    margin: -15px 0;
+    background: $loading-bar-animate-color;
+  }
+}
+
+
+//球在线上移动
+$loading-line-width : 150px;
+$loading-line-height : 4px;
+$loading-line-color : $loading-bar-color;
+$loading-line-animate-color : $loading-bar-animate-color;
+$loading-ball-width : 16px;
+$loading-ball-height : 16px;
+$loading-ball-color : $loading-line-color;
+$loading-ball-animate-color : $loading-line-animate-color;
+$ball-start-position : -8px;
+$ball-end-position : $loading-line-width + $ball-start-position;
+
+
+.ma-ball-loading{
+  width: $loading-line-width;
+  height: $loading-line-height;
+  border-radius: 2px;
+  position: relative;
+  font-size: $ball-end-position;
+  background: $loading-bar-color;
+  -webkit-animation : changeBgColor 1.04s ease-in infinite alternate;
+
+  span{
+    display: inline-block;
+    width: $loading-ball-width;
+    height: $loading-ball-height;
+    border-radius: 50%;
+    background: $loading-ball-color;
+    position: absolute;
+    left: 0;
+    margin-top: -7px;
+    margin-left: $ball-start-position;
+    -webkit-animation : changePosition 1.04s ease-in infinite alternate;
+  }
+}
+
+@-webkit-keyframes changeBgColor{
+  0%{
+    background: $loading-line-color;
+  }
+  100%{
+    background: $loading-line-animate-color;
+  }
+}
+
+@-webkit-keyframes changePosition{
+  0%{
+    background: $loading-ball-color;
+  }
+  100%{
+    margin-left: $ball-end-position;
+    background: $loading-ball-animate-color;
+  }
+}
+
+//水平 circle
+
+$loading-circle-line-height : 14px;
+$loading-circle-width : 15px;
+
+.ma-circle-loading{
+
+  width: $loading-line-width;
+  height: $loading-circle-line-height;
+
+  span{
+    display: inline-block;
+    width: $loading-circle-width;
+    height: 100%;
+    margin-right: 5px;
+    border-radius: 50%;
+    background: $loading-ball-color;
+    -webkit-animation : circleLoad 1.04s ease infinite;
+
+
+    &:last-child{
+      margin-right: 0;
+    }
+    &:nth-child(1){
+      -webkit-animation-delay:.13s;
+    }
+    &:nth-child(2){
+      -webkit-animation-delay:.26s;
+    }
+    &:nth-child(3){
+      -webkit-animation-delay:.39s;
+    }
+    &:nth-child(4){
+      -webkit-animation-delay:.52s;
+    }
+    &:nth-child(5){
+      -webkit-animation-delay:.65s;
+    }
+  }
+}
+
+@-webkit-keyframes circleLoad{
+  from{
+    opacity: 1;
+    -webkit-transform : scale(1.3);
+  }
+  to{
+    opacity: 0;
+    -webkit-transform : scale(.3);
+  }
+}
+
+
+//圆环circle
+.ma-circel-effect{
+  width: 100px;
+  height: 100px;
+  position: relative;
+
+  span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: $loading-ball-color;
+    position: absolute;
+    -webkit-animation: effectLoad 1.04s ease infinite;
+
+
+    &:nth-child(1){
+      left: 0;
+      top: 50%;
+      margin-top: -10px;
+      -webkit-animation-delay: .13s;
+    }
+    &:nth-child(2){
+      left: 14px;
+      top: 14px;
+      -webkit-animation-delay:0.26s;
+    }
+    &:nth-child(3){
+      left: 50%;
+      top: 0;
+      margin-left: -10px;
+      -webkit-animation-delay:0.39s;
+    }
+    &:nth-child(4){
+      top: 14px;
+      right:14px;
+      -webkit-animation-delay:0.52s;
+    }
+    &:nth-child(5){
+      right: 0;
+      top: 50%;
+      margin-top:-10px;
+      -webkit-animation-delay:0.65s;
+    }
+    &:nth-child(6){
+      right: 14px;
+      bottom:14px;
+      -webkit-animation-delay:0.78s;
+    }
+    &:nth-child(7){
+      bottom: 0;
+      left: 50%;
+      margin-left: -10px;
+      -webkit-animation-delay:0.91s;
+    }
+    &:nth-child(8){
+      bottom: 14px;
+      left: 14px;
+      -webkit-animation-delay:1.04s;
+    }
+  }
+}
+
+@-webkit-keyframes effectLoad{
+  from{
+    -webkit-transform:scale(1.2);
+    opacity: 1;
+  }
+  to{
+    -webkit-transform:scale(.3);
+    opacity: .5;
+  }
+}
+
+//
+
+.ma-circle-alpha{
+  width: 100px;
+  height: 100px;
+  position: relative;
+
+  div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-animation: circleAlphaLoad 2.08s linear infinite;
+    span{
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: $loading-ball-color;
+      position: absolute;
+      left: 50%;
+      margin-top: -10px;
+      margin-left: -10px;
+    }
+
+    &:nth-child(1){
+      -webkit-animation-delay:0.2s;
+    }
+    &:nth-child(2){
+      -webkit-animation-delay:0.4s;
+    }
+    &:nth-child(3){
+      -webkit-animation-delay:0.6s;
+    }
+    &:nth-child(4){
+      -webkit-animation-delay:0.8s;
+    }
+  }
+}
+
+@-webkit-keyframes circleAlphaLoad{
+  0%{
+    -webkit-transform: rotate(0deg);
+  }
+  10%{
+    -webkit-transform: rotate(45deg);
+  }
+  50%{
+    opacity: 1;
+    -webkit-transform: rotate(160deg);
+  }
+  62%{
+    opacity: 0;
+  }
+  65%{
+    opacity: 0;
+    -webkit-transform: rotate(200deg);
+  }
+  90%{
+    -webkit-transform: rotate(340deg);
+  }
+  100%{
+    -webkit-transform: rotate(360deg);
+  }
+
+}
+
+//三角形
+
+.ma-triangle-loading{
+  width: 60px;
+  height: 60px;
+  position: relative;
+  -webkit-animation: triangleLoad 3s linear infinite;
+
+  div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    span{
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #99cc66;
+      position: absolute;
+      left: 50%;
+      margin-top: -10px;
+      margin-left: -10px;
+      -webkit-animation: changeTriangleBgColor 3s ease infinite;
+    }
+
+    &:nth-child(2){
+      -webkit-transform: rotate(120deg);
+      span{
+        -webkit-animation-delay: 1s;
+      }
+    }
+    &:nth-child(3){
+      -webkit-transform: rotate(240deg);
+      span{
+        -webkit-animation-delay: 2s;
+      }
+    }
+  }
+
+
+}
+
+@-webkit-keyframes triangleLoad {
+  0%{
+    -webkit-transform: rotate(0deg);
+  }
+  33.3%{
+    -webkit-transform: rotate(120deg);
+  }
+  66.6%{
+    -webkit-transform: rotate(240deg);
+  }
+  100%{
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes changeTriangleBgColor {
+  0%,100%{
+    background: #99CC66;
+  }
+  33.3%{
+    background: #FFFF66;
+  }
+  66.6%{
+    background: #FF6666;
+  }
+}

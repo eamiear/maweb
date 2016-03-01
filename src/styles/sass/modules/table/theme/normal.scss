@@ -1,0 +1,86 @@
+// === COLORS ===
+$baseGradientColor : #fff;
+$baseFontSize : 14px !default;
+
+$thBgColorGradientBase : $baseGradientColor;
+$thBgColor-gradient-start : $thBgColorGradientBase;
+$thBgColor-gradient-middle : #cbebff;
+$thBgColor-gradient-end : #e5e5e5;
+$thBorderColor : #ddd;
+$thColor : #444;
+$thFontSize : $baseFontSize;
+
+$tdColor : #666;
+$tdFontSize : $baseFontSize;
+
+$paginationDetailFontSize : 13px;
+
+
+
+
+// === END VIRIABLE ===
+
+.bootstrap-table .table {
+  font-family: "Microsoft YaHei";
+}
+
+//  ==== TABLE HEADER & BODY ====
+.fixed-table-container{
+  & thead th,
+  & .fixed-table-header{
+    background: $thBgColorGradientBase;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU1ZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  $thBgColor-gradient-start 0%, $thBgColor-gradient-end 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$thBgColor-gradient-start), color-stop(100%,$thBgColor-gradient-end));
+    background: -webkit-linear-gradient(top,  $thBgColor-gradient-start 0%,$thBgColor-gradient-end 100%);
+    background: -o-linear-gradient(top,  $thBgColor-gradient-start 0%,$thBgColor-gradient-end 100%);
+    background: -ms-linear-gradient(top,  $thBgColor-gradient-start 0%,$thBgColor-gradient-end 100%);
+    background: linear-gradient(to bottom,  $thBgColor-gradient-start 0%,$thBgColor-gradient-end 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$thBgColor-gradient-start, endColorstr=$thBgColor-gradient-end,GradientType=0 );
+  }
+  & thead th .th-inner,
+  & tbody td .th-inner{
+    font-size : $thFontSize;
+    color: $thColor;
+  }
+
+  // header sortable arrow
+  & thead {
+    & th .both{
+
+    }
+    & th .desc{
+
+    }
+    & th .asc{
+
+    }
+  }
+
+  & tbody td{
+    font-size: $tdFontSize;
+    color: $tdColor;
+  }
+}
+//  ==== END TABLE HEADER & BODY====
+
+
+// ====== PAGINATION  ====
+
+.fixed-table-pagination {
+  &  .btn-group button,
+  &  .btn-group .btn{
+    padding: 2px 14px;
+  }
+
+  & > .pagination-detail{
+    font-size: $paginationDetailFontSize;
+    & .btn,
+    & button{
+      font-size: $paginationDetailFontSize;
+    }
+  }
+}
+
+
+// ====== END PAGINATION  ====

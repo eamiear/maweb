@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Loading</title>
+    <link rel="stylesheet" href="../../src/styles/css/utils/util.css"/>
+    <link rel="stylesheet" href="../../src/styles/css/modules/loading/loading.css"/>
+</head>
+<body>
+<!-- 面包屑导航 -->
+<ol class="breadcrumb">
+    <li class="">首页</li>
+    <li class="">UI组件</li>
+    <li class="active">loading</li>
+</ol>
+<div class="page_content">
+    <blockquote class="alert alert-info">
+        <header style="border-bottom: 1px solid #bbb;">
+            <h3 class="title page-header">Loading</h3>
+        </header>
+        <section class="descripiton">
+
+        </section>
+    </blockquote>
+
+    <div class="well show">
+        <div class="ma-wraper" id="load">
+            <script>
+                $("#load").load("../../docs/loading/1.html");
+            </script>
+        </div>
+        <div class="space-v"></div>
+
+        <blockquote class="alert alert-danger">
+            相关代码
+        </blockquote>
+        <div class="btn-group">
+            <button class="btn btn-primary" data-url="../docs/loading/1.html" data-target="viewHTML">查看HTML代码</button>
+            <button class="btn btn-primary" data-url="../../src/styles/sass/modules/loading/loading.scss" data-target="viewSASS">查看SASS代码</button>
+            <button class="btn btn-primary" data-url="../../src/styles/css/modules/loading/loading.css" data-target="viewCSS">查看CSS代码</button>
+        </div>
+    </div>
+
+    <div class="well show">
+        <div class="ma-wraper" id="load_2">
+            <script>
+                $("#load_2").load("../../docs/loading/2.html");
+            </script>
+        </div>
+        <div class="space-v"></div>
+
+        <blockquote class="alert alert-danger">
+            相关代码
+        </blockquote>
+        <div class="btn-group">
+            <button class="btn btn-primary" data-url="../docs/loading/1.html" data-target="viewHTML">查看HTML代码</button>
+            <button class="btn btn-primary" data-url="../../src/styles/sass/modules/loading/loading.scss" data-target="viewSASS">查看SASS代码</button>
+            <button class="btn btn-primary" data-url="../../src/styles/css/modules/loading/loading.css" data-target="viewCSS">查看CSS代码</button>
+        </div>
+    </div>
+
+    <div class="well show">
+        <div class="ma-wraper" id="load_3">
+            <script>
+                $("#load_3").load("../../docs/loading/3.html");
+            </script>
+        </div>
+        <div class="space-v"></div>
+    </div>
+
+    <div class="well show">
+        <div class="ma-wraper" id="load_4">
+            <script>
+                $("#load_4").load("../../docs/loading/4.html");
+            </script>
+        </div>
+        <div class="space-v"></div>
+    </div>
+
+    <div class="well show">
+        <div class="ma-wraper" id="load_5">
+            <script>
+                $("#load_5").load("../../docs/loading/5.html");
+            </script>
+        </div>
+        <div class="space-v"></div>
+    </div>
+
+    <div class="well show">
+        <div class="ma-wraper" id="load_6">
+            <script>
+                $("#load_6").load("../../docs/loading/6.html");
+            </script>
+        </div>
+        <div class="space-v"></div>
+    </div>
+</div>
+
+<div class="modal fade" id="viewHTML" style="z-index:1111111111111;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body" >
+                <textarea class="unexplain" readonly id="navbar_doc_html_v_1"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</body>
+
+<script src="assets/requirejs/require.js"></script>
+<script>
+    require.config({
+        baseUrl: 'assets',
+        paths: {
+            "jquery": "jquery/dist/jquery",
+            "bootstrap" : "bootstrap/dist/js/bootstrap"
+        },
+        shim: {
+            "bootstrap": {
+                deps: ["jquery"],
+                exports: "bootstrap"
+            }
+        }
+    });
+    require(["../../src/scripts/common/modal","bootstrap"],function(modal){
+        modal.showModal();
+        modal.showModal(".load3");
+    })
+</script>
+</body>
+</html>

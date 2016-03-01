@@ -1,0 +1,49 @@
+{
+  "name": "maweb",
+  "version": "1.0.0",
+  "description": "maweb",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-cssmin": "^0.12.2",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-qunit": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-autoprefixer": "~0.7.2",
+    "grunt-contrib-compass": "latest",
+    "grunt-contrib-livereload": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-regarde": "*"
+  },
+  "author": "maweb",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^6.1.0",
+    "grunt-contrib-compass": "^1.0.3",
+    "grunt-postcss": "^0.7.1",
+    "load-grunt-tasks": "^3.2.0",
+    "serve-index": "^1.7.3",
+    "serve-static": "^1.10.2"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "m"
+  },
+  "keywords": [
+    "maweb"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/eamiear/maweb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eamiear/maweb/issues"
+  },
+  "homepage": "https://github.com/eamiear/maweb#readme"
+}

@@ -1,0 +1,14 @@
+// LVHA
+@mixin link-color(
+$normal,
+$link : $normal,
+$visited : $normal,
+$hover : $normal,
+$active : $normal
+){
+  color: $normal;
+  &:link{ color: $link;}
+  &:visited { color: $visited;}
+  &:hover{ color: $hover;}
+  &:active{ color: $active;}
+}

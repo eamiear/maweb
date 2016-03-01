@@ -1,0 +1,6 @@
+.search-toolbar {
+  margin: 10px;
+}
+.search-toolbar .form-control:focus ~ .form-control-feedback > i {
+  color: #66afe9;
+}

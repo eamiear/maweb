@@ -1,0 +1,14 @@
+.bell {
+  position: relative;
+}
+.bell .badge {
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  font-weight: normal;
+  border-radius: 100%;
+  background: orangered;
+  position: absolute;
+  top: 6px;
+  right: 1px;
+}

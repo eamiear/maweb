@@ -1,0 +1,23 @@
+{
+  "name": "maweb",
+  "version": "0.0.0",
+  "description": "maweb",
+  "keywords": [
+    "maweb"
+  ],
+  "authors": [
+    "maweb"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "assets"
+  ],
+  "main": "",
+  "moduleType": [],
+  "homepage": ""
+}

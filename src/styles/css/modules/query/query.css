@@ -1,0 +1,20 @@
+.ma-query {
+  border: 1px solid;
+}
+.ma-query > .list-group > .list-group-item {
+  border: none;
+}
+.ma-query .list-group-item .list-group-item-heading {
+  font-weight: 400;
+  margin-right: 15px;
+}
+.ma-query .btn-flat-bar .btn-flat {
+  padding: 4px 20px;
+  margin-right: 15px;
+  border-color: #eee;
+}
+.ma-query .btn-flat-bar .btn-flat:hover, .ma-query .btn-flat-bar .btn-flat:focus, .ma-query .btn-flat-bar .btn-flat:active, .ma-query .btn-flat-bar .btn-flat.active {
+  color: #fff;
+  background-color: #00BFFF;
+  border-color: #00BFFF;
+}

@@ -1,0 +1,29 @@
+@import "../../ma-button/colors";
+
+.flat-btn-bar,
+.btn-group{
+  & > .flat-btn{
+    margin-right: 6px;
+  }
+}
+
+.flat-btn{
+  padding: 4px 14px;
+  & > i{
+    padding-right: 4px;
+  }
+}
+
+.btn-flat-bar,
+.btn-group{
+  & > .btn-flat{
+    margin-right: 6px;
+  }
+}
+
+.btn-flat{
+  padding: 4px 14px;
+  & > i{
+    margin-right: 6px;
+  }
+}

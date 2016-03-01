@@ -1,0 +1,38 @@
+///*
+// MARGIN  MIXIN
+//--------------------------*/
+
+@mixin ma-margin($num,$direction:all){
+  @if($direction == all){
+    margin: $num;
+  }
+
+  @if($direction == top){
+    margin-top : $num;
+  }
+
+  @if($direction == bottom){
+    margin-bottom: $num;
+  }
+
+  @if($direction == left){
+    //margin-left: str_insert($num,'px',str_length($num)+1);
+    margin-left: $num;
+  }
+
+  @if($direction == right){
+    margin-right: $num;
+  }
+}
+
+@mixin ma-margin-horizontal ($num){
+  margin: 0 $num;
+}
+
+@mixin ma-margin-vertical($num){
+  margin: $num 0;
+}
+
+@mixin ma-margin-short($vertical,$horizontal){
+  margin: $vertical $horizontal;
+}

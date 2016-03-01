@@ -1,0 +1,20 @@
+@import "../ma-margin/mixin";
+@import "../ma-padding/mixin";
+
+.space-v{
+  @include ma-margin-vertical(30px);
+}
+.space-h{
+  @include ma-margin-horizontal(30px);
+}
+
+.ma-wraper{
+  width: 100%;
+  text-align: center;
+  @include ma-margin-horizontal(auto);
+  @include ma-padding-short(50px,20px);
+}
+
+.ma-h-center{
+  @include ma-margin-horizontal(auto);
+}

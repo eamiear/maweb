@@ -1,0 +1,30 @@
+{
+  "name": "jquery-layer",  
+  "version": "1.8.5",  
+  "description": "A popup layer component for jquery",
+  "keywords": [
+    "jquery",
+    "popup",
+    "layer"
+  ],
+  "authors": [
+     "Sentsin Xu (贤心)"
+  ],
+  "license": "LGPLv3",
+  "homepage": "http://sentsin.com/jquery/layer/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Haixing-Hu/layer.git"
+  },
+  "main": "layer.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  	"jquery": ">=1.8.0"
+  }
+}

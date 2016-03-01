@@ -1,0 +1,64 @@
+.ma-flip {
+  display: table;
+  width: 50%;
+}
+.ma-flip > .ma-nav-item, .ma-flip > li {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  min-width: 124px;
+  height: 52px;
+  float: none;
+  overflow: hidden;
+}
+.ma-flip > .ma-nav-item:hover > .ma-submenu, .ma-flip > .ma-nav-item.ma-active > .ma-submenu, .ma-flip > li:hover > .ma-submenu, .ma-flip > li.ma-active > .ma-submenu {
+  display: none;
+}
+.ma-flip > .ma-nav-item > a, .ma-flip > li > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  line-height: 52px;
+  height: 52px;
+  padding: 0;
+  -webkit-transition: all 200ms linear;
+  /* Old webkit version including chrome, safari, etc. */
+  -moz-transition: all 200ms linear;
+  /* Old Firefox version */
+  -ms-transition: all 200ms linear;
+  /* IE 10+ - IE < 10 will just apply the top position without any transition affect */
+  -o-transition: all 200ms linear;
+  /* Old opera support */
+  transition: all 200ms linear;
+  /* Normal declatration */
+}
+.ma-flip > .ma-nav-item > a:hover, .ma-flip > .ma-nav-item > a:active, .ma-flip > li > a:hover, .ma-flip > li > a:active {
+  top: -100%;
+}
+.ma-flip > .ma-nav-item > a:after, .ma-flip > li > a:after {
+  display: block;
+  content: attr(data-caption);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 52px;
+  color: #FFF;
+  background: #3498db;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #3498db 0%, #2980b9 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3498db), color-stop(100%, #2980b9));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #3498db 0%, #2980b9 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #3498db 0%, #2980b9 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #3498db 0%, #2980b9 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #3498db 0%, #2980b9 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3498db', endColorstr='#2980b9',GradientType=0 );
+  /* IE6-9 */
+}

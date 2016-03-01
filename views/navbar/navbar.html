@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航条</title>
+    <link rel="stylesheet" href="../../src/styles/css/navbar/navbar.css"/>
+    <link rel="stylesheet" href="../../src/styles/css/bell/bell.css"/>
+    <link rel="stylesheet" href="../../src/styles/css/utils/util.css"/>
+    <link rel="stylesheet" href="../../src/styles/css/navbar/effect.css"/>
+</head>
+<body>
+<div>
+    <!-- 面包屑导航 -->
+    <ol class="breadcrumb">
+        <li class="">首页</li>
+        <li class="active">NAVBAR</li>
+    </ol>
+    <div class="page_content">
+        <blockquote class="alert alert-info">
+            <header style="border-bottom: 1px solid #bbb;">
+                <h3 class="title page-header">导航</h3>
+            </header>
+            <section class="descripiton">
+
+            </section>
+        </blockquote>
+
+        <!-- 导航条 1-->
+        <div class="well show">
+            <div id="navbar_1">
+                <script>
+                    $("#navbar_1").load("../../docs/navbar/1.html");
+                </script>
+            </div>
+            <div class="space-v"></div>
+
+            <blockquote class="alert alert-danger">
+                相关代码
+            </blockquote>
+            <div class="btn-group">
+                <button class="btn btn-primary" data-url="../docs/navbar/1.html" data-target="viewHTML">查看HTML代码</button>
+                <button class="btn btn-primary" data-url="../../src/styles/sass/navbar/navbar.scss" data-target="viewSASS">查看SASS代码</button>
+                <button class="btn btn-primary" data-url="../../src/styles/sass/bell/bell.scss" data-target="viewBELL">查看bell SASS代码</button>
+                <button class="btn btn-primary" data-url="../../src/styles/css/navbar/navbar.css" data-target="viewCSS">查看CSS代码</button>
+                <button class="btn btn-primary" data-url="" data-target="viewJS">查看JS代码</button>
+            </div>
+        </div>
+
+        <!-- 导航条 2-->
+        <div class="well show">
+            <div id="navbar_2">
+                <!--<script>
+                    $("#navbar_2").load("../../docs/navbar/3.html");
+                </script>-->
+            </div>
+            <div class="space-v"></div>
+        </div>
+    </div>
+</div>
+
+<!-- modal  集合 -->
+
+<div class="modal fade" id="viewHTML" style="z-index:1111111111111;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body" >
+                <textarea class="unexplain" readonly id="navbar_doc_html_v_1"></textarea>
+                <!--<script>
+                    $("#navbar_doc_html_v_1").load("../docs/navbar/1.html");
+                </script>-->
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+</div>
+</body>
+
+<script src="assets/requirejs/require.js"></script>
+<script>
+    require.config({
+        //基路经（依赖模块都在同一个基目录下）
+        baseUrl: 'assets',
+        //paths指定模块的加载路径
+        paths: {
+            "jquery": "jquery/dist/jquery",
+            "bootstrap" : "bootstrap/dist/js/bootstrap"
+        },
+        shim: {
+            "bootstrap": {
+                deps: ["jquery"],
+                exports: "bootstrap"
+            }
+        }
+    });
+    require(["../../src/scripts/common/modal","bootstrap"],function(modal){
+        modal.showModal();
+        modal.showModal(".nav_example_2");
+
+        //$('.dropdown-toggle').dropdown();
+    })
+</script>
+
+
+</html>

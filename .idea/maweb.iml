@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="CompassSettings">
+    <option name="compassConfigPath" value="G:\WorkSpaces\gs-workspace\maweb\src\styles\config.rb" />
+    <option name="compassExecutableFilePath" value="D:/programFile/Ruby22-x64/bin/compass.bat" />
+    <option name="compassSupportEnabled" value="true" />
+  </component>
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="maweb node_modules" level="project" />
+    <orderEntry type="library" name="sass-stdlib" level="application" />
+  </component>
+</module>
+

@@ -1,0 +1,68 @@
+///*
+// BACKGROUND  MIXIN
+//--------------------------*/
+
+
+///*
+// BACKGROUND-ORIGIN  MIXIN
+//-------------------------------*/
+
+@mixin ma-background-origin($mode : border-box){
+  $xmode : null;
+
+  @if($mode == border-box){
+    $xmode = border;
+  }
+
+  @if($mode == padding-box){
+    $xmode = padding;
+  }
+
+  @if($mode == content-box){
+    $xmode = content;
+  }
+
+  -moz-background-origin: $xmode;
+  -webkit-background-origin: $xmode;
+  background-origin: $mode;
+}
+
+
+///*
+// BACKGROUND-CLIP  MIXIN
+//-------------------------------*/
+
+@mixin ma-background-clip($mode:border-box){
+  $xmode : null;
+
+  @if($mode == border-box){
+    $xmode = border;
+  }
+
+  @if($mode == padding-box){
+    $xmode = padding;
+  }
+
+  @if($mode == content-box){
+    $xmode = content;
+  }
+
+  -webkit-moz-background-clip: $xmode;
+  -moz-moz-background-clip: $xmode;
+  -ms-moz-background-clip: $xmode;
+  -o-moz-background-clip: $xmode;
+  background-clip: $mode;
+}
+
+
+///*
+// BACKGROUND-SIZE  MIXIN
+//-------------------------------*/
+
+@mixin ma-background-size($size){
+  -webkit-moz-background-size: $size;
+  -moz-moz-background-size: $size;
+  -ms-moz-background-size: $size;
+  -o-moz-background-size: $size;
+  background-size: $size;
+}

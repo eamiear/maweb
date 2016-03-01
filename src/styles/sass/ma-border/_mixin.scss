@@ -1,0 +1,102 @@
+///*
+// BORDER  MIXIN
+//--------------------------*/
+
+
+
+///*
+// BORDER RADIUS  MIXIN
+//--------------------------*/
+@mixin ma-border-radius($radius,$direction:all){
+  @if ($direction == all) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+  }
+
+  @if ($direction == top) {
+    -moz-border-radius: $radius $radius 0 0;
+    -webkit-border-radius: $radius $radius 0 0;
+    border-radius: $radius $radius 0 0;
+  }
+
+  @if ($direction == right) {
+    -moz-border-radius: 0 $radius $radius 0;
+    -webkit-border-radius: 0 $radius $radius 0;
+    border-radius: 0 $radius $radius 0;
+  }
+
+  @if ($direction == bottom) {
+    -moz-border-radius: 0 0 $radius $radius;
+    -webkit-border-radius: 0 0 $radius $radius;
+    border-radius: 0 0 $radius $radius;
+  }
+
+  @if ($direction == left) {
+    -moz-border-radius: $radius 0 0 $radius;
+    -webkit-border-radius: $radius 0 0 $radius;
+    border-radius: $radius 0 0 $radius;
+  }
+}
+
+
+///*
+// BORDER TRIANGLE  MIXIN
+//--------------------------*/
+@mixin ma-border-triangle($borderWidth,$borderColor,$direction){
+  $default-border-style : solid;
+
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border-width: $borderWidth;
+  border-style: $default-border-style;
+  _border-style: dashed;
+  border-color: transparent;
+
+  @if($direction == top){
+    border-bottom-color: $borderColor;
+    _border-bottom-style: $default-border-style;
+  }
+
+  @if($direction == right){
+    border-left-color: $borderColor;
+    _border-left-style: $default-border-style;
+  }
+
+  @if($direction == bottom){
+    border-top-color: $borderColor;
+    _border-top-style: $default-border-style;
+  }
+
+  @if($direction == left){
+    border-right-color: $borderColor;
+    _border-right-style: $default-border-style;
+  }
+}
+
+@mixin ma-arrow($width,$height,$borderWidth,$borderColor,$bgColor,$direction){
+  $default-border-style : solid;
+
+  width: $width;
+  height: $height;
+  overflow: hidden;
+  border-width: $borderWidth;
+  border-style: $default-border-style;
+  _border-style: dashed;
+  border-color: $borderColor;
+  background: $bgColor;
+  border-radius: 2px;
+  border-right: 0;
+  border-bottom: 0;
+
+  @if($direction == top){
+    transform : rotate(45deg);
+  }@elseif($direction == left){
+    transform : rotate(-45deg);
+  }@elseif($direction == right){
+    transform :rotate(90deg);
+  }@elseif($direction == bottom){
+    transform:rotate(-90deg);
+  }
+}

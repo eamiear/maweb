@@ -1,0 +1,62 @@
+@import "variable";
+///*
+// MARGIN & PADDING MIXIN
+//--------------------------*/
+
+@mixin  margin($num){
+  margin: $num;
+}
+
+@mixin margin-horizontal($num){
+  margin-left: $num;
+  margin-right: $num;
+}
+
+@mixin margin-vertical($num){
+  margin-top: $num;
+  margin-bottom: $num;
+}
+
+@mixin padding($num){
+  padding: $num;
+}
+
+@mixin padding-horizontal($num){
+  padding-left: $num;
+  padding-right: $num;
+}
+
+@mixin padding-vertical ($num){
+  padding-top: $num;
+  padding-bottom: $num;
+}
+
+@mixin margin-define($direction,$num){
+  //margin-{$direction} : $num;
+}
+
+
+///*
+// LINK
+//--------------------------*/
+
+@mixin link-color ($normal,$hover:$normal,$visited:$normal){
+  color: $normal;
+  &:hover{ color: $hover; }
+  &:visited{ color: $visited;}
+}
+
+// LVHA
+@mixin link-color(
+  $normal,
+  $link : $normal,
+  $visited : $normal,
+  $hover : $normal,
+  $active : $normal
+){
+  color: $normal;
+  &:link{ color: $link;}
+  &:visited { color: $visited;}
+  &:hover{ color: $hover;}
+  &:active{ color: $active;}
+}

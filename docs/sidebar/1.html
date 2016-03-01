@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sidebar</title>
+    <meta charset="utf-8">
+
+    <!-- META -->
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- END META -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../../assets/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../assets/font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="../../src/styles/css/modules/sidebar/blue.css">
+    <!-- END CSS -->
+
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <div class="brand">
+                    <a class="navbar-brand" href="#"><span>sidebar</span></a>
+                    <a class="toogle pull-right"><i class="fa fa-chevron-left"></i></a>
+                </div>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <select class="form-control solsoThemeEvent">
+                            <option value="" selected>choose</option>
+                            <option value="blue">blue theme</option>
+                            <option value="orange">orange theme</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="body slide">
+    <aside class="sidebar show">
+        <div id="solso-sidebar">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="heading1">
+                            <h4 class="panel-title">
+                                <a href="#" class="single-item">
+                                    <i class="fa fa-dashboard"></i> Dashboard
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading2">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                                <i class="fa fa-bar-chart-o"></i> Charts
+                                <i class="pull-right fa fa-caret-down"></i>
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div id="collapse2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2">
+                        <div>
+                            <a href="#" class="list-group-item">bar Chart</a>
+                            <a href="#" class="list-group-item">pie Chart</a>
+                            <a href="#" class="list-group-item">google Chart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading3">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                <i class="fa fa-table"></i> Tables
+                                <i class="pull-right fa fa-caret-down"></i>
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div id="collapse3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading3">
+                        <div>
+                            <a href="#" class="list-group-item">Simple Tables</a>
+                            <a href="#" class="list-group-item">Data Tables</a>
+                            <a href="#" class="list-group-item">Beauty Tables</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading4">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                <i class="fa fa-edit"></i> Forms
+                                <i class="pull-right fa fa-caret-down"></i>
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div id="collapse4" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading4">
+                        <div>
+                            <a href="#" class="list-group-item">Form 1</a>
+                            <a href="#" class="list-group-item">Form 2</a>
+                            <a href="#" class="list-group-item">Form 3</a>
+                            <a href="#" class="list-group-item">Form 4</a>
+                            <a href="#" class="list-group-item">Form 5</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading5">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                <i class="fa fa-desktop"></i> UI Elements
+                                <i class="pull-right fa fa-caret-down"></i>
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div id="collapse5" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading5">
+                        <div>
+                            <a href="#" class="list-group-item">Element 1</a>
+                            <a href="#" class="list-group-item">Element 2</a>
+                            <a href="#" class="list-group-item">Element 3</a>
+                            <a href="#" class="list-group-item">Element 4</a>
+                            <a href="#" class="list-group-item">Element 5</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading6">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                <i class="fa fa-file"></i> Pages
+                                <i class="pull-right fa fa-caret-down"></i>
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div id="collapse6" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading6">
+                        <div>
+                            <a href="#" class="list-group-item">Page 1</a>
+                            <a href="#" class="list-group-item">Page 2</a>
+                            <a href="#" class="list-group-item">Page 3</a>
+                            <a href="#" class="list-group-item">Page 4</a>
+                            <a href="#" class="list-group-item">Page 5</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading7">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                                <i class="fa fa-picture-o"></i> Gallery
+                                <i class="pull-right fa fa-caret-down"></i>
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div id="collapse7" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading7">
+                        <div>
+                            <a href="gallery-1.php" class="list-group-item">Gallery 1</a>
+                            <a href="gallery-2.php" class="list-group-item">Gallery 2</a>
+                            <a href="gallery-3.php" class="list-group-item">Gallery 3</a>
+                            <a href="gallery-4.php" class="list-group-item">Gallery 4</a>
+                            <a href="gallery-5.php" class="list-group-item">Gallery 5</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+
+    <div class="container-fluid left-border">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 bottom40">
+                <h1>
+                    <i class="fa fa-users"></i> Beauty tables
+                </h1>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="../../assets/jquery/jquery.min.js"></script>
+<script src="../../assets/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>

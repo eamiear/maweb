@@ -1,0 +1,38 @@
+///*
+// PADDING  MIXIN
+//--------------------------*/
+
+@mixin ma-padding($num,$direction:all){
+  @if($direction == all){
+    padding: $num;
+  }
+
+  @if($direction == top){
+    padding-top : $num;
+  }
+
+  @if($direction == bottom){
+    padding-bottom: $num;
+  }
+
+  @if($direction == left){
+    //padding-left: str_insert($num,'px',str_length($num)+1);
+    padding-left: $num;
+  }
+
+  @if($direction == right){
+    padding-right: $num;
+  }
+}
+
+@mixin ma-padding-horizontal ($num){
+  padding: 0 $num;
+}
+
+@mixin ma-padding-vertical($num){
+  padding: $num 0;
+}
+
+@mixin ma-padding-short($vertical,$horizontal){
+  padding: $vertical $horizontal;
+}

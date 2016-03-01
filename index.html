@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>maweb</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="src/styles/css/normalize.css"/>
+    <link rel="stylesheet" href="src/styles/css/theme.css"/>
+    <link rel="stylesheet" href="src/styles/css/menu/menu.css"/>
+    <link rel="stylesheet" href="src/styles/css/spec/sunset.css"/>
+    <link rel="stylesheet" href="src/styles/css/index.css"/>
+
+
+    <!--[if lt IE 9]>
+    <script src="assets/responsive/html5shiv.min.js"></script>
+    <script src="assets/responsive/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="navbar-fixed">
+<!--顶部导航-->
+<nav class="navbar navbar-default tool_border_radius_0 tool_margin_bottom_0 navbar-fixed-top" role="navigation">
+    <div class="navbar_container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="sr-only">Toggle</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <span class="glyphicon glyphicon-cloud"></span>
+                maweb
+            </a>
+        </div><!--navbar-header-->
+
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <!--导航主菜单-->
+            <!--<ul class="nav navbar-nav navbar-menu" style="margin-left: 86px;">
+                <li class="active">
+                    <a href="index.html" data-ajax='true'>FrontEnd</a>
+                </li>
+                <li class="">
+                    <a href="backend.html" data-ajax='true'>Backend</a>
+                </li>
+                <li class="">
+                    <a href="#" data-ajax='true'>Others</a>
+                </li>
+            </ul>-->
+            <!--用户icon及设置导航-->
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <!--<img src="" alt="logo" class="nav-head-img"/>Z-->
+                        <i class="glyphicon glyphicon-user"></i>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">menu1</a>
+                        </li>
+                        <li>
+                            <a href="#">menu2</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <span class="glyphicon glyphicon-cog"></span>
+                                系统设置
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul><!--navbar-nav -->
+        </div><!--navbar-collapse -->
+    </div><!--navbar_container-->
+</nav>
+
+<div id="container" class="container_shadow">
+    <div class="main_container">
+        <!--左侧栏-sidebar-->
+        <div class="sidebar sidebar_fixed">
+            <!-- menu-->
+            <ul class="list-group tool_border_radius_0 bsMenu" id="menu">
+                <li class="list-group-item">
+                    <a href="index.html" class="active">
+                        <span class="glyphicon glyphicon-tower"></span>
+                        <span class="menu_text">首页</span>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a>
+                        <span class="glyphicon glyphicon-pushpin"></span>
+                        <span class="menu_text">
+                            插件列表
+                            <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                        </span>
+                    </a>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="html/plugins/plugin.html" data-ajax="true">插件列表</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="pluginsDocs.html" data-ajax="true">第三方插件说明</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="myPluginsDocs.html" data-ajax="true">原创</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="list-group-item">
+                    <a>
+                        <span class="glyphicon glyphicon-phone"></span>
+                        <span class="menu_text">
+                            UI组件
+                            <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                        </span>
+                    </a>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="views/navbar/navbar.html" data-ajax="true" class="">导航条</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="views/UI/sidebar.html" data-ajax="true" class="">侧边栏菜单</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="views/UI/menu.html" data-ajax="true"  class="">下拉菜单</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="views/UI/loading.html" data-ajax="true" class="">loading</a>
+                        </li>
+
+                    </ul><!--二级菜单-->
+                </li>
+                <li class="list-group-item">
+                    <a>
+                        <span class="glyphicon glyphicon-th"></span>
+                        <span class="menu_text">
+                            表格
+                            <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                        </span>
+                    </a>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="javascript:;" class="del">简单</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:;" clsss="del">datatable</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="list-group-itemt">
+                    <a>
+                        <span class="glyphicon glyphicon-edit"></span>
+                        <span class="menu_text">
+                            表单
+                            <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                        </span>
+                    </a>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="javascript:;" class="del">表单组件</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:;" class="del">向导提示 & 验证</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:;" class="del">编辑器</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:;" class="del">文件上传</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="list-group-item">
+                    <a>
+                        <span class="glyphicon glyphicon-calendar"></span>
+                        <span class="menu_text">
+                            日历
+                        </span>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a>
+                        <span class="glyphicon glyphicon-picture"></span>
+                        <span class="menu_text">
+                            其他页面
+                            <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                        </span>
+                    </a>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="javascript:;" class="del">登录</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:;" class="del">404</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:;" class="del">500</a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <a>
+                                三级菜单
+                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                            </a>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <a href="javascript:;">子项1</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="javascript:;">子项2</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="javascript:;">子项3</a>
+                                </li>
+                            </ul><!--二级菜单-->
+                        </li>
+                    </ul>
+                </li>
+            </ul><!--menu-->
+
+            <!-- 缩放控制按钮-->
+            <div class="bsMenu_collapse">
+                <a href="javascript:void(0);">
+                    <span class="glyphicon glyphicon-resize-horizontal"></span>
+                </a>
+            </div>
+
+        </div><!--sidebar-->
+
+        <!-- 右侧部分-->
+        <section class="main_content">
+            <!-- 面包屑导航-->
+            <ol class="breadcrumb tool_border_bottom_style tool_border_radius_0">
+                <li class="active">首页</li>
+            </ol>
+            <div class="page_content">
+                <blockquote>
+                    <p>maweb</p>
+                    <footer>Something...</footer>
+                </blockquote>
+                <div class="alert alert-danger" role="alert">
+                    <h4>....</h4>
+                </div>
+            </div>
+        </section>
+    </div><!--main_container-->
+    <a href="#" class="btn_scroll_up">
+        <span class="glyphicon glyphicon-arrow-up"></span>
+    </a>
+</div>
+
+<script data-main="src/scripts/app" src="assets/requirejs/require.js"></script>
+</body>
+</html>
